@@ -23,7 +23,7 @@ Al usar la herramienta de sslscan solo debemos indicar la dirección IP en conju
 sslscan <ip:port>
 ~~~
 
-![sslscan-heartbleed](/assets/img/00/image.png)
+![sslscan-heartbleed](/assets/00/image.png)
 
 #### nmap
 
@@ -33,7 +33,7 @@ Podemos revisar si la vulnerabilidad de Heartbleed utilizando nmap de la siguien
 nmap --script ssl-heartbleed -p<port> <IP>
 ~~~
 
-![ssl-heartbleed-nmap](/assets/img/00/1.png)
+![ssl-heartbleed-nmap](/assets/00/1.pngg)
 
 ### Dump memory con ssltest.py
 
@@ -49,6 +49,6 @@ Ejemplo:
 python3 ssltest.py 127.0.0.1 -p 8443
 ~~~
 
-![dump](/assets/img/00/2.png)
+![dump](/assets/00/2.png)
 
 
