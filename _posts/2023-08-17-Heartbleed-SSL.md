@@ -33,7 +33,7 @@ Podemos revisar si la vulnerabilidad de Heartbleed utilizando nmap de la siguien
 nmap --script ssl-heartbleed -p<port> <IP>
 ~~~
 
-![ssl-heartbleed-nmap](/assets/00/1.pngg)
+![ssl-heartbleed-nmap](/assets/00/1.png)
 
 ### Dump memory con ssltest.py
 
