@@ -50,7 +50,7 @@ El cliente envía encabezados de solicitud en una transacción HTTP. Estos encab
 Puede encontrar una lista completa de encabezados de solicitud y su uso [aqui](https://datatracker.ietf.org/doc/html/rfc7231#section-5) .
 
 
-## Resposne Header
+## Response Header
 
 Los encabezados de respuesta pueden ser se utilizados en una respuesta HTTP y no se relacionan con el contenido. Ciertos encabezados de respuesta, como Age, Locationy, Serverse utilizan para proporcionar más contexto sobre la respuesta. Los siguientes encabezados se ven comúnmente en las respuestas HTTP.
 
