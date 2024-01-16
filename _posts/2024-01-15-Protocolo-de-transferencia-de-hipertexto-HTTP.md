@@ -32,27 +32,53 @@ No todos los componentes son necesarios para acceder a un recurso. Los principal
 
 ## cURL
 
+En este módulo, enviaremos solicitudes web a través de dos de las herramientas más importantes para cualquier evaluador de penetración web, un navegador web, como Chrome o Firefox, y la herramienta cURL de línea de comandos.
+
+cURL (URL del cliente) es una herramienta y biblioteca de línea de comandos que admite principalmente HTTP junto con muchos otros protocolos. Esto lo convierte en un buen candidato para scripts y automatización, lo que lo hace esencial para enviar varios tipos de solicitudes web desde la línea de comandos, lo cual es necesario para muchos tipos de pruebas de penetración web.
+
+- Solicitud HTTP básica
+
+~~~ curl
+curl inlanefreight.com
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+...SNIP...
+~~~
+
+Vemos que cURL no representa el código HTML/JavaScript/CSS, a diferencia de un navegador web, sino que lo imprime en su formato sin formato. Sin embargo, como Pentesters, estamos interesados ​​principalmente en el contexto de solicitud y respuesta, que generalmente resulta mucho más rápido y conveniente que un navegador web.
+
+También podemos usar cURL para descargar una página o un archivo y generar el contenido en un archivo usando la Flag -O. Si queremos especificar el nombre del archivo de salida, podemos usar la Flag -o y especificar el nombre. De lo contrario, podemos usar -O y cURL usará el nombre del archivo remoto, de la siguiente manera:
+
+~~~ curl
+curl -O inlanefreight.com/index.html
+
+# output
+index.html
+~~~
+
+
 | **Command** | **Description** |
 | --------------|-------------------|
-| `curl -h` | cURL help menu |
-| `curl inlanefreight.com` | Basic GET request |
-| `curl -s -O inlanefreight.com/index.html` | Download file |
-| `curl -k https://inlanefreight.com` | Skip HTTPS (SSL) certificate validation |
-| `curl inlanefreight.com -v` | Print full HTTP request/response details |
-| `curl -I https://www.inlanefreight.com` | Send HEAD request (only prints response headers) |
-| `curl -i https://www.inlanefreight.com` | Print response headers and response body |
-| `curl https://www.inlanefreight.com -A 'Mozilla/5.0'` | Set User-Agent header |
-| `curl -u admin:admin http://<SERVER_IP>:<PORT>/` | Set HTTP basic authorization credentials |
-| `curl  http://admin:admin@<SERVER_IP>:<PORT>/` | Pass HTTP basic authorization credentials in the URL |
-| `curl -H 'Authorization: Basic YWRtaW46YWRtaW4=' http://<SERVER_IP>:<PORT>/` | Set request header |
-| `curl 'http://<SERVER_IP>:<PORT>/search.php?search=le'` | Pass GET parameters |
-| `curl -X POST -d 'username=admin&password=admin' http://<SERVER_IP>:<PORT>/` | Send POST request with POST data |
-| `curl -b 'PHPSESSID=c1nsa6op7vtk7kdis7bcnbadf1' http://<SERVER_IP>:<PORT>/` | Set request cookies |
-| `curl -X POST -d '{"search":"london"}' -H 'Content-Type: application/json' http://<SERVER_IP>:<PORT>/search.php` | Send POST request with JSON data |
+| curl -h | cURL help menu |
+| curl inlanefreight.com | Basic GET request |
+| curl -s -O inlanefreight.com/index.html | Download file |
+| curl -k https://inlanefreight.com | Skip HTTPS (SSL) certificate validation |
+| curl inlanefreight.com -v | Print full HTTP request/response details |
+| curl -I https://www.inlanefreight.com | Send HEAD request (only prints response headers) |
+| curl -i https://www.inlanefreight.com | Print response headers and response body |
+| curl https://www.inlanefreight.com -A 'Mozilla/5.0' | Set User-Agent header |
+| curl -u admin:admin http://<SERVER_IP>:<PORT>/ | Set HTTP basic authorization credentials |
+| curl  http://admin:admin@<SERVER_IP>:<PORT>/ | Pass HTTP basic authorization credentials in the URL |
+| curl -H 'Authorization: Basic YWRtaW46YWRtaW4=' http://<SERVER_IP>:<PORT>/ | Set request header |
+| curl 'http://<SERVER_IP>:<PORT>/search.php?search=le'` | Pass GET parameters |
+| curl -X POST -d 'username=admin&password=admin' http://<SERVER_IP>:<PORT>/ | Send POST request with POST data |
+| curl -b 'PHPSESSID=c1nsa6op7vtk7kdis7bcnbadf1' http://<SERVER_IP>:<PORT>/ | Set request cookies |
+|curl -X POST -d '{"search":"london"}' -H 'Content-Type: application/json' http://<SERVER_IP>:<PORT>/search.php | Send POST request with JSON data |
 
 ## APIs
 | **Command** | **Description** |
-| --------------|-------------------|
+|--------------|----------------|
 | `curl http://<SERVER_IP>:<PORT>/api.php/city/london` | Read entry |
 | `curl -s http://<SERVER_IP>:<PORT>/api.php/city/ \| jq` | Read all entries |
 | `curl -X POST http://<SERVER_IP>:<PORT>/api.php/city/ -d '{"city_name":"HTB_City", "country_name":"HTB"}' -H 'Content-Type: application/json'` | Create (add) entry |
