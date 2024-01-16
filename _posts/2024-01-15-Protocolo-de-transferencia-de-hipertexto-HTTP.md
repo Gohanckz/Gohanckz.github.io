@@ -37,7 +37,7 @@ cURL (URL del cliente) es una herramienta y biblioteca de línea de comandos que
 
 - Solicitud HTTP básica
 
-~~~ curl
+~~~ bash
 curl inlanefreight.com
 
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
@@ -49,7 +49,7 @@ Vemos que cURL no representa el código HTML/JavaScript/CSS, a diferencia de un 
 
 También podemos usar cURL para descargar una página o un archivo y generar el contenido en un archivo usando la Flag -O. Si queremos especificar el nombre del archivo de salida, podemos usar la Flag -o y especificar el nombre. De lo contrario, podemos usar -O y cURL usará el nombre del archivo remoto, de la siguiente manera:
 
-~~~ curl
+~~~ bash
 curl -O inlanefreight.com/index.html
 
 # output
