@@ -5,7 +5,6 @@ tags: web http burpsuite bugbounty
 categories: academy 
 ---
 
-# Protocolo de transferencia de hipertexto (HTTP)
 
 La comunicación HTTP consta de un cliente y un servidor, donde el cliente solicita un recurso al servidor. El servidor procesa las solicitudes y devuelve el recurso solicitado. El puerto predeterminado para la comunicación HTTP es el puerto 80, aunque se puede cambiar a cualquier otro puerto, dependiendo de la configuración del servidor web. Se utilizan las mismas solicitudes cuando utilizamos Internet para visitar diferentes sitios web. Ingresamos un Fully Qualified Domain Name ( FQDN) como Uniform Resource Locator( URL) para llegar al sitio web deseado, como www.hackthebox.com .
 
