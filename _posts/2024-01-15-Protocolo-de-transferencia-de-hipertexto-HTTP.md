@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Protocolo de transferencia de hipertexto (HTTP)
-tags: web http burpsuite bugbounty
+tags: web http burpsuite bugbounty CBBH
 categories: academy 
 ---
 
