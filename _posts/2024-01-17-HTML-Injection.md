@@ -19,7 +19,7 @@ El siguiente ejemplo es una página web muy básica con un solo botón " Click t
 
 Si no se implementa una desinfección de los insumos, este es potencialmente un blanco fácil para ataques HTML Injection y Cross-Site Scripting (XSS). Echamos un vistazo al código fuente de la página y no vemos ningún saneamiento de entrada, ya que la página toma la entrada del usuario y la muestra directamente:
 
-~~~ bash
+~~~ html
 <!DOCTYPE html>
 <html>
 
