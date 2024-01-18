@@ -2,7 +2,7 @@
 layout: post
 title: Proxychains
 tags: tool proxy proxychain
-categories: tool 
+categories: tools 
 ---
 
 Proxychains enruta todo el tráfico procedente de cualquier herramienta de consola a cualquier proxy que especifiquemos. Proxychains agrega un proxy a cualquier herramienta de comandos, y por lo tanto, es el método más sencillo para enrutar el tráfico web a través de nuestros servidores proxy web.
