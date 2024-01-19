@@ -37,8 +37,8 @@ categories: [information gathering]
 | **Resource/Command** | **Description** |
 |-|-|
 | VirusTotal | [https://www.virustotal.com/gui/home/url](https://www.virustotal.com/gui/home/url) |
-| Censys` | [https://censys.io/](https://censys.io/) |
-| Crt.sh` | [https://crt.sh/](https://crt.sh/) |
+| Censys | [https://censys.io/](https://censys.io/) |
+| Crt.sh | [https://crt.sh/](https://crt.sh/) |
 | curl -s https://sonar.omnisint.io/subdomains/{domain} \| jq -r '.[]' \| sort -u | All subdomains for a given domain. |
 | curl -s https://sonar.omnisint.io/tlds/{domain} \| jq -r '.[]' \| sort -u | All TLDs found for a given domain. |
 | curl -s https://sonar.omnisint.io/all/{domain} \| jq -r '.[]' \| sort -u | All results across all TLDs for a given domain. |
