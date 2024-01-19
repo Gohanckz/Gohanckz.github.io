@@ -97,3 +97,22 @@ zoomeye
 | SecLists | [https://github.com/danielmiessler/SecLists](https://github.com/danielmiessler/SecLists) |
 | nslookup -type=any -query=AXFR $TARGET nameserver.target.domain | Zone Transfer using Nslookup against the target domain and its nameserver. |
 | gobuster dns -q -r "${NS}" -d "${TARGET}" -w "${WORDLIST}" -p ./patterns.txt -o "gobuster_${TARGET}.txt" | Bruteforcing subdomains. |
+
+
+
+## Virtual Hosts
+
+| **Resource/Command** | **Description** |
+|-|-|
+| curl -s http://192.168.10.10 -H "Host: randomtarget.com" | Changing the HOST HTTP header to request a specific domain. |
+| cat ./vhosts.list \| while read vhost;do echo "\n********\nFUZZING: ${vhost}\n********";curl -s -I http://<IP address> -H "HOST: ${vhost}.target.domain" \| grep "Content-Length: ";done | Bruteforcing for possible virtual hosts on the target domain. |
+| ffuf -w ./vhosts -u http://<IP address> -H "HOST: FUZZ.target.domain" -fs 612 | Bruteforcing for possible virtual hosts on the target domain using ffuf. |
+
+
+## Crawling
+
+| **Resource/Command** | **Description** |
+|-|-|
+| ZAP | [https://www.zaproxy.org/](https://www.zaproxy.org/) |
+| ffuf -recursion -recursion-depth 1 -u http://192.168.10.10/FUZZ -w /opt/useful/SecLists/Discovery/Web-Content/raft-small-directories-lowercase.txt | Discovering files and folders that cannot be spotted by browsing the website.
+| ffuf -w ./folders.txt:FOLDERS,./wordlist.txt:WORDLIST,./extensions.txt:EXTENSIONS -u http://www.target.domain/FOLDERS/WORDLISTEXTENSIONS | Mutated bruteforcing against the target web server. |
