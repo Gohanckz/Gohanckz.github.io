@@ -46,3 +46,22 @@ categories: [information gathering]
 | curl -s https://sonar.omnisint.io/reverse/{ip}/{mask} \| jq -r '.[]' \| sort -u | Reverse DNS lookup of a CIDR range. |
 | curl -s "https://crt.sh/?q=${TARGET}&output=json" \| jq -r '.[] \| "\(.name_value)\n\(.common_name)"' \| sort -u | Certificate Transparency. |
 | cat sources.txt \| while read source; do theHarvester -d "${TARGET}" -b $source -f "${source}-${TARGET}";done | Searching for subdomains and other information on the sources provided in the source.txt list. |
+
+#### Sources.txt
+
+~~~ txt
+baidu
+bufferoverun
+crtsh
+hackertarget
+otx
+projecdiscovery
+rapiddns
+sublist3r
+threatcrowd
+trello
+urlscan
+vhost
+virustotal
+zoomeye
+~~~
