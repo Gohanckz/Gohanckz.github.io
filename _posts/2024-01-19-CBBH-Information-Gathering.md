@@ -72,6 +72,5 @@ zoomeye
 | **Resource/Command** | **Description** |
 |-|-|
 | Netcraft | [https://www.netcraft.com/](https://www.netcraft.com/) |
-| WayBackMachine | [https://web.archive.org/](http://web.archive.org/) |
 | WayBackURLs | [https://github.com/tomnomnom/waybackurls](https://github.com/tomnomnom/waybackurls) |
 | waybackurls -dates https://$TARGET > waybackurls.txt | Crawling URLs from a domain with the date it was obtained. |
