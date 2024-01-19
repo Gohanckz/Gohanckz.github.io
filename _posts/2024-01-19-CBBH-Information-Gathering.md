@@ -18,8 +18,8 @@ categories: [information gathering]
 
 | **Command** | **Description** |
 |-|-|
-| nslookup $TARGET` | Identify the A record for the target domain. |
-| nslookup -query=A $TARGET` | Identify the A record for the target domain. |
+| nslookup $TARGET | Identify the A record for the target domain. |
+| nslookup -query=A $TARGET | Identify the A record for the target domain. |
 | dig $TARGET @<nameserver/IP> | Identify the A record for the target domain.  |
 | dig a $TARGET @<nameserver/IP> | Identify the A record for the target domain.  |
 | nslookup -query=PTR <IP> | Identify the PTR record for the target IP address. |
