@@ -13,7 +13,7 @@ categories: [information gathering]
 | `whois $TARGET` | WHOIS lookup for the target. |
 
 
----
+
 ## DNS Enumeration
 
 | **Command** | **Description** |
@@ -32,7 +32,6 @@ categories: [information gathering]
 | `dig mx $TARGET @<nameserver/IP>` | Identify the `MX` records for the target domain. |
 
 
----
 ## Passive Subdomain Enumeration
 
 | **Resource/Command** | **Description** |
@@ -66,7 +65,7 @@ virustotal
 zoomeye
 ```
 
----
+
 ## Passive Infrastructure Identification
 
 | **Resource/Command** | **Description** |
@@ -76,8 +75,6 @@ zoomeye
 | `WayBackURLs` | [https://github.com/tomnomnom/waybackurls](https://github.com/tomnomnom/waybackurls) |
 | `waybackurls -dates https://$TARGET > waybackurls.txt` | Crawling URLs from a domain with the date it was obtained. |
 
-
----
 ## Active Infrastructure Identification
 
 | **Resource/Command** | **Description** |
@@ -90,7 +87,6 @@ zoomeye
 | `cat subdomain.list \| aquatone -out ./aquatone -screenshot-timeout 1000` | Makes screenshots of all subdomains in the subdomain.list. |
 
 
----
 ## Active Subdomain Enumeration
 
 | **Resource/Command** | **Description** |
@@ -101,7 +97,6 @@ zoomeye
 | `gobuster dns -q -r "${NS}" -d "${TARGET}" -w "${WORDLIST}" -p ./patterns.txt -o "gobuster_${TARGET}.txt"` | Bruteforcing subdomains. |
 
 
----
 ## Virtual Hosts
 
 | **Resource/Command** | **Description** |
@@ -111,7 +106,6 @@ zoomeye
 | `ffuf -w ./vhosts -u http://<IP address> -H "HOST: FUZZ.target.domain" -fs 612` | Bruteforcing for possible virtual hosts on the target domain using `ffuf`. |
 
 
----
 ## Crawling
 
 | **Resource/Command** | **Description** |
