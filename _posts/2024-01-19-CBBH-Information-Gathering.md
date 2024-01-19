@@ -49,7 +49,7 @@ categories: [information gathering]
 
 #### Sources.txt
 
-~~~ txt
+~~~ bash
 baidu
 bufferoverun
 crtsh
