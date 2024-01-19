@@ -74,3 +74,26 @@ zoomeye
 | Netcraft | [https://www.netcraft.com/](https://www.netcraft.com/) |
 | WayBackURLs | [https://github.com/tomnomnom/waybackurls](https://github.com/tomnomnom/waybackurls) |
 | waybackurls -dates https://$TARGET > waybackurls.txt | Crawling URLs from a domain with the date it was obtained. |
+
+
+
+## Active Infrastructure Identification
+
+| **Resource/Command** | **Description** |
+|-|-|
+| curl -I "http://${TARGET}" | Display HTTP headers of the target webserver. |
+| whatweb -a https://www.facebook.com -v | Technology identification. |
+| Wappalyzer | [https://www.wappalyzer.com/](https://www.wappalyzer.com/) |
+| wafw00f -v https://$TARGET | WAF Fingerprinting. |
+| Aquatone | [https://github.com/michenriksen/aquatone](https://github.com/michenriksen/aquatone) |
+| cat subdomain.list \| aquatone -out ./aquatone -screenshot-timeout 1000 | Makes screenshots of all subdomains in the subdomain.list. |
+
+
+## Active Subdomain Enumeration
+
+| **Resource/Command** | **Description** |
+|-|-|
+| HackerTarget | [https://hackertarget.com/zone-transfer/](https://hackertarget.com/zone-transfer/) |
+| SecLists | [https://github.com/danielmiessler/SecLists](https://github.com/danielmiessler/SecLists) |
+| nslookup -type=any -query=AXFR $TARGET nameserver.target.domain | Zone Transfer using Nslookup against the target domain and its nameserver. |
+| gobuster dns -q -r "${NS}" -d "${TARGET}" -w "${WORDLIST}" -p ./patterns.txt -o "gobuster_${TARGET}.txt" | Bruteforcing subdomains. |
