@@ -7,7 +7,7 @@ categories: HackTheBox
 
 # Description
 
-
+|||
 | -- | -- |
 | S.O | Linux |
 
