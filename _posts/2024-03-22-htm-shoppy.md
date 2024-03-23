@@ -7,10 +7,6 @@ categories: HackTheBox
 
 # Description
 
-|||
-| -- | -- |
-| S.O | Linux |
-
 
 # Recon
 
