@@ -103,7 +103,7 @@ josh
 
 We look for the user admin and click on the download button, we obtain the following:
 
-![alt text](Pasted%20image%2020240320221225.png)
+![alt text](/assets/img/Pasted%20image%2020240320221225.png)
 
 We look for the user josh and click on the download button, we obtain the report corresponding to the user josh.
 
