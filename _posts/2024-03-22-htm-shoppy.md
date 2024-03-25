@@ -7,11 +7,13 @@ categories: HackTheBox
 
 # Description
 
-| dasdsad | asd asd|
+|||
 | -- | -- |
-| ads asd | - asdas |
+| S.O | Linux |
+| Difficulty | Easy |
 
-# Recon
+
+## Recon
 
 ## Nmap scan
 
@@ -63,7 +65,7 @@ The port 9093 on the web browser returns some kind of log:
 
 ![alt text](/assets/img/Pasted%20image%2020240320160439.png)
 
-# NoSQLi
+## NoSQLi
 
 We use this payload for NoSQLi 
 
@@ -78,7 +80,7 @@ With this we have access to the administration panel
 
 ![alt text](/assets/img/Pasted%20image%2020240320220351.png)
 
-# User enumeration
+## User enumeration
 
 We proceed to list users using the search engine, when we enter an existing user, we obtain a result similar to the following:
 
@@ -126,7 +128,7 @@ Now when we make the report from the download button we obtain the two users ins
 [{"_id":"62db0e93d6d6a999a66ee67a","username":"admin","password":"23c6877d9e2b564ef8b32c3a23de27b2"},{"_id":"62db0e93d6d6a999a66ee67b","username":"josh","password":"6ebcea65320589ca4f2f1ce039975995"}]
 ~~~
 
-# Cracking Passwords
+## Cracking Passwords
 
 Crack user josh's password using crackstation
 
@@ -141,7 +143,7 @@ We tried to crack the password of the admin user, but it is not possible with cr
 ![alt text](/assets/img/Pasted%20image%2020240321222908.png)
 
 
-# Using josh's credentials
+## Using josh's credentials
 
 We will try to log in with josh's credentials on the portal http://mattermost.shoppy.htb/login.
 
@@ -164,7 +166,7 @@ jaeger:Sh0ppyBest@pp!
 
 Since port 22 is open, we check if we can connect via ssh using these credentials.
 
-# SSH
+## SSH
 
 ~~~ bash
 ssh jaeger@shoppy.htb -p 22             #password -> Sh0ppyBest@pp!
@@ -174,7 +176,7 @@ We proceed to read the unprivileged user flag.
 
 ![alt text](/assets/img/Pasted%20image%2020240322134016.png)
 
-# Analyzing the binary
+## Analyzing the binary
 
 
 We are looking for a binary that can be run without being root
@@ -199,7 +201,7 @@ sudo -u deploy /home/deploy/password-manager
 
 We do not have the password, we will apply reversing to try to see the validation.
 
-# Download binary to our kali linux machine
+## Download binary to our kali linux machine
 
 We set up an http server with python from the victim machine
 
@@ -214,7 +216,7 @@ We download it from the web or by performing a wget to the binary.
 ![alt text](/assets/img/Pasted%20image%2020240322143254.png)
 
 
-# Reversing with ghidra
+## Reversing with ghidra
 
 First we will see what type of file it is
 
@@ -258,7 +260,7 @@ bash
 ![alt text](/assets/img/Pasted%20image%2020240322145901.png)
 
 
-# Privilege Escalation
+## Privilege Escalation
 
 We verify the groups to which the user deploy "id" belongs
 
