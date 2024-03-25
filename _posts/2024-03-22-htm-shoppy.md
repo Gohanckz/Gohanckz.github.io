@@ -13,8 +13,6 @@ categories: HackTheBox
 | Difficulty | Easy |
 
 
-## Recon
-
 ## Nmap scan
 
 In this case, we use nmap for scan the ports and services.
