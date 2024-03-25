@@ -134,7 +134,7 @@ Now when we make the report from the download button we obtain the two users ins
 
 Crack user josh's password using crackstation
 
-~~~ password
+~~~ text
 remembermethisway
 ~~~
 
@@ -149,7 +149,7 @@ We tried to crack the password of the admin user, but it is not possible with cr
 
 We will try to log in with josh's credentials on the portal http://mattermost.shoppy.htb/login.
 
-~~~ creds
+~~~ text
 josh:remembermethisway
 ~~~
 
@@ -162,7 +162,7 @@ Navigating the web application, we find credentials for the deploy machine.
 ![alt text](/assets/img/Pasted%20image%2020240321223244.png)
 
 
-~~~ creds
+~~~ text
 jaeger:Sh0ppyBest@pp!
 ~~~
 
